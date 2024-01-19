@@ -18,7 +18,7 @@ class ProductManager {
         };
 
         
-        if (title == 0||description == 0 ||price == 0||stock == 0|| thumbail == 0) {
+        if (!title || !description || !price || !stock || !thumbail || !code) {
             console.log("No pueden existir datos vacíos");
             return;
         }
@@ -56,7 +56,7 @@ const nuevoProducto = new ProductManager();
 
 
 
-nuevoProducto.addProduct("Arroz", "Blanco y rico", "$200", "./Multimedia/imagenes/arroz.png", "abc1", 10);
+nuevoProducto.addProduct("Arroz", "Blanco y rico", "$200",  10);
 
 
 nuevoProducto.addProduct("Arroz", "Blanco y rico", "$200", "./Multimedia/imagenes/arroz.png", "abc1" ,10);
