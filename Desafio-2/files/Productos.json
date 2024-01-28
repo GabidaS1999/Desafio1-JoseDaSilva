@@ -1,0 +1,11 @@
+[
+  {
+    "id": 944167,
+    "title": "producto prueba",
+    "description": "Este es un producto prueba",
+    "price": 100,
+    "thumbail": "Sin imagen",
+    "code": "abc123",
+    "stock": 25
+  }
+]

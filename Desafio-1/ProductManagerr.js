@@ -1,4 +1,4 @@
-class ProductManager {
+/*class ProductManager {
     constructor() {
         this.productos = [];
         this.id = 1;
@@ -68,4 +68,4 @@ console.log(todosLosProductos);
 console.log("El id buscado:");
 console.log(nuevoProducto.getProductById(4));
 console.log("El id buscado:")
-console.log(nuevoProducto.getProductById(2));
+console.log(nuevoProducto.getProductById(2));*/
