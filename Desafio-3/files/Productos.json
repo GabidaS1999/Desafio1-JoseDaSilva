@@ -1,0 +1,92 @@
+[
+  {
+    "id": 2,
+    "title": "Papa",
+    "description": "Blancas y rosadas",
+    "price": 100,
+    "thumbail": "Sin imagen",
+    "code": "abc123",
+    "stock": 25
+  },
+  {
+    "id": 62821,
+    "title": "Bananas",
+    "description": "Brasileras",
+    "price": 200,
+    "thumbail": "Sin imagen",
+    "code": "abc132",
+    "stock": 25
+  },
+  {
+    "id": 270515,
+    "title": "Manzanas",
+    "description": "Las mas ricas",
+    "price": 100,
+    "thumbail": "Sin imagen",
+    "code": "abc131",
+    "stock": 25
+  },
+  {
+    "id": 677906,
+    "title": "Naranjas",
+    "description": "Muy jugosas",
+    "price": 150,
+    "thumbail": "Sin imagen",
+    "code": "abc130",
+    "stock": 25
+  },
+  {
+    "id": 754276,
+    "title": "Huevos",
+    "description": "Con dos yemas",
+    "price": 280,
+    "thumbail": "Sin imagen",
+    "code": "abc129",
+    "stock": 25
+  },
+  {
+    "id": 831293,
+    "title": "Calabacin",
+    "description": "Muy ricos",
+    "price": 90,
+    "thumbail": "Sin imagen",
+    "code": "abc128",
+    "stock": 25
+  },
+  {
+    "id": 589656,
+    "title": "Cebolla",
+    "description": "Te hacen llorar",
+    "price": 80,
+    "thumbail": "Sin imagen",
+    "code": "abc127",
+    "stock": 25
+  },
+  {
+    "id": 711191,
+    "title": "Zapallo",
+    "description": "Los mas grandes",
+    "price": 250,
+    "thumbail": "Sin imagen",
+    "code": "abc125",
+    "stock": 25
+  },
+  {
+    "id": 506696,
+    "title": "Morron",
+    "description": "Rojos y verdes",
+    "price": 250,
+    "thumbail": "Sin imagen",
+    "code": "abc126",
+    "stock": 25
+  },
+  {
+    "id": 860406,
+    "title": "Mango",
+    "description": "Muy dulces",
+    "price": 250,
+    "thumbail": "Sin imagen",
+    "code": "abc140",
+    "stock": 25
+  }
+]

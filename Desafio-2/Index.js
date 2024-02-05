@@ -3,7 +3,7 @@ let productManager = new ProductManager();
 
 
 
-//productManager.addProduct( "producto prueba", "Este es un producto prueba", 200, "Sin imagen", "abc123", 25)
+productManager.addProduct( "producto prueba", "Este es un producto prueba", 200, "Sin imagen", "abc123", 25)
 
 
 //productManager.getProductById(553376)
