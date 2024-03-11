@@ -1,29 +1,20 @@
 [
   {
-    "id": 694403,
-    "title": "Television",
-    "description": "95 pulgadas",
-    "price": 15000,
-    "thumbnails": "no",
-    "code": "abc123",
-    "stock": 100
-  },
-  {
-    "id": 97,
-    "title": "Estereo",
-    "description": "Sonido fuerte",
-    "price": 10000,
-    "thumbnails": "imgEstereo",
-    "code": "abc125",
-    "stock": 100
-  },
-  {
-    "id": 42,
-    "title": "Parlante",
+    "id": 94,
+    "title": "pruebaa2",
     "description": "Sonido fuerte",
     "price": 15000,
     "thumbnails": "imgEstereo",
-    "code": "abc130",
+    "code": "abc444",
+    "stock": 100
+  },
+  {
+    "id": 61,
+    "title": "pruebaa3",
+    "description": "Sonido fuerte",
+    "price": 15000,
+    "thumbnails": "imgEstereo",
+    "code": "abc454",
     "stock": 100
   }
 ]

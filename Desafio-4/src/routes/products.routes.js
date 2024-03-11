@@ -2,6 +2,7 @@ import ProductManager from '../Product-Manager.js';
 let productManager = new ProductManager();
 
 
+
 import { Router } from "express"
 
 const router = Router();
@@ -20,7 +21,7 @@ router.get('/realtimeproducts', (req, res) => {
 
 
 
-router.get('/realtimeproducts', async (req, res) => {
+router.get('/', async (req, res) => {
 
     let todosLosProductos = await productManager.getProducts();
 
@@ -48,6 +49,7 @@ router.get('/:pid', async (req, res) => {
 })
 
 
+
 router.post('/realtimeproducts', async (req, res) => {
     const socket = req.io;
 
@@ -66,9 +68,9 @@ router.post('/realtimeproducts', async (req, res) => {
         }
 
         await productManager.addProduct(product.title, product.description, product.price, product.thumbnails, product.code, product.stock);
-        res.send({ status: 'success', msg: 'Producto creado' });
-        const allProducts = productManager.getProducts()
-        socket.emit('products', allProducts)
+        socket.emit('newProduct', product);
+        res.send({ status: 'success', msg: `Producto creado` });
+
     } catch (error) {
         console.error(`Error al agregar un nuevo producto: ${error}`);
         res.status(500).send({ status: 'error', error: 'Error al agregar un nuevo producto' });
@@ -96,30 +98,26 @@ router.put('/:pid', async (req, res) => {
 })
 
 router.delete('/realtimeproducts/:pid', async (req, res) => {
-    const socket = req.io
-    let productId = parseInt(req.params.pid);
-    const productSize = products.length;
-
-    const productPosition = products.findIndex((p) => p.id === productId);
-
-    if (productPosition < 0) {
-        return res.status(404).send({ status: "info", error: "Producto no encontrado" });
-    }
-
-    products.splice(productPosition, 1);
+    const socket = req.io;
+    const productId = parseInt(req.params.pid);
 
     try {
+        const productPosition = products.findIndex((p) => p.id === productId);
 
-        await productManager.deleteProduct(productId)
+        
+
+
+        products.splice(productPosition, 1);
+        await productManager.deleteProduct(productId);
+        const updatedProducts = await productManager.getProducts();
+        socket.emit('products', updatedProducts);
         res.send({ status: "success", msg: "Producto eliminado" });
-        const allProducts = productManager.getProducts()
-        socket.emit('products', allProducts)
-
     } catch (error) {
-        console.error(`Error al escribir en el archivo JSON: ${error}`);
-        res.status(500).send({ status: "error", error: "Error al actualizar el archivo JSON" });
+        console.error(`Error al eliminar el producto: ${error}`);
+        res.status(500).send({ status: "error", error: "Error al eliminar el producto" });
     }
 });
+
 
 
 export default router;
